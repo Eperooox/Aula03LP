@@ -7,30 +7,34 @@ public class Agenda
     public static void main(String[] args)
     {
         // Criando um objeto "Telefone" usando um construtor sem parâmetro padrão
-        Telefone telefone1 = new Telefone();
+        Telefone telefone = new Telefone();
+
         Contato contato1 = new Contato();
-        contato1.nome = "Rafaela";
-        contato1.numero ="123456";
-
-        telefone1.contato = contato1;
-
-        System.out.println(telefone1.contato.nome + " " + telefone1.contato.numero);
-
-        // o mesmo caso
-        telefone1.marca = "Iphone";
-        telefone1.cor = "Branco";
-
         Contato contato2 = new Contato();
+        Contato contato3 = new Contato();
+        Contato contato4 = new Contato();
 
-        telefone1.contatoA = contato2;
-
-        contato2.nome = "Jão";
+        contato1.nome = "Rafaela";
+        contato1.numero = "123456";
+        telefone.cor = "Vermelho";
+        telefone.cor2 = "Preto";
+        contato2.nome = "João";
         contato2.numero = "318989952";
+        contato3.nome = "Carmen";
+        contato3.numero = "3189871147";
+        contato4.nome = "Juliana";
 
-        System.out.println(telefone1.contatoA.nome +", " + telefone1.contatoA.numero + ", " + telefone1.marca);
+        telefone.marca = "Iphone";
+        telefone.marca2 = "S20";
 
-        // incluindo o método tocar
-        telefone1.Tocar("Pagode");
+        telefone.contato = contato1;
+        telefone.contatoA = contato2;
+        telefone.contatoB = contato3;
+        telefone.contatoC = contato4;
 
-    }
-}
+        telefone.Tocar(" Pagode");
+
+
+        System.out.println(telefone.contato.nome);
+        System.out.println(telefone.contatoA.nome + ", " + telefone.marca + ", " + telefone.contatoA.numero);
+        System.out.println(telefone.contatoB.nome + ", " + telefone.marca2 + ", " + telefone.contatoB.numero);
